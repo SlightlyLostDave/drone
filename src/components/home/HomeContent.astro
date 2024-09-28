@@ -1,12 +1,28 @@
 ---
+import { Image } from 'astro:assets';
 
+import backgroundImage from '../../assets/images/home/drone-forest-background.jpg';
 ---
 
-<h1 class="text-4xl">
-  There is no strife,<br />no prejudice,<br />no national conflict
-</h1>
-<p class="text-lg">
-  Its hazards are hostile to us all. Its conquest deserves the best of all
-  mankind.
-</p>
-<button>Contact</button>
+<div class="relative h-screen w-screen overflow-hidden">
+  <div class="absolute inset-0">
+    <Image
+      class="object-cover"
+      src={backgroundImage}
+      alt="Overhead photo of a drone flying over a snow-covered field"
+    />
+    <div class="absolute inset-0 bg-gray-700 mix-blend-multiply"></div>
+  </div>
+  <div
+    class="relative p-8 max-w-screen-2xl mx-auto flex flex-col items-start justify-center"
+  >
+    <h1 class="text-4xl">
+      There is no strife,<br />no prejudice,<br />no national conflict
+    </h1>
+    <p class="text-lg">
+      Its hazards are hostile to us all. Its conquest deserves the best of all
+      mankind.
+    </p>
+    <button>Contact</button>
+  </div>
+</div>
